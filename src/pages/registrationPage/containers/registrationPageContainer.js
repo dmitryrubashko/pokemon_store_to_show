@@ -22,11 +22,11 @@ const RegistrationPageContainer = () => {
 
   const isRegistrationValid = isEmail(formData.email);
   const isPasswordValid = formData.password.length > 0;
-  const isGenderValid = formData.gender === 'male' || formData.gender === 'female';
+  // const isGenderValid = formData.gender === 'male' || formData.gender === 'female';
   const idFirstNameValid = typeof (formData.firstName) === 'string';
   const idLastNameValid = typeof (formData.lastName) === 'string';
 
-  const isFormValid = isRegistrationValid && isPasswordValid && isGenderValid && idFirstNameValid && idLastNameValid;
+  const isFormValid = isRegistrationValid && isPasswordValid && idFirstNameValid && idLastNameValid;
   const handleSubmit = useCallback((event) =>{
     event.preventDefault();
     dispatch(SIGN_UP_REQUEST(formData));
