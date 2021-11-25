@@ -15,6 +15,7 @@ const store = configureStore(
 
 );
 
+
 const persistor = persistStore(store);
 
 ReactDOM.render(
